@@ -180,6 +180,15 @@ You can use the following array to test your solution:
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 ```
 
+
+function sumNumbers(arr){
+let total= 0
+arr.forEach(function(numbers){
+total += numbers;
+});
+return total;
+}
+console.log(sumNumbers(numbers));
 <br>
 
 
