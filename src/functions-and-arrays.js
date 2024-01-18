@@ -49,16 +49,6 @@ function sumNumbers(num) {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function sumNumbers(num) {
-    let result = 0
-
-    num.forEach((number)=> {
-        result += number
-    })
-    return result
-}
-
-
 function averageNumbers(num) {
     if (num.length === 0) {
         return 0
