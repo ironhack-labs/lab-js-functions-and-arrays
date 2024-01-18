@@ -20,7 +20,7 @@ const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard",
 function findLongestWord(array) {
 let longestWord = array[0];
 if(array.length === 0){
-    return null;
+    return 0;
 }
 for(let i = 0; i < array.length; i++){
     if(array[i].length > longestWord.length){
@@ -39,12 +39,14 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numArray) {
     let sum = 0;
+
     if(numArray.length !== 0){
-    for(let i = 0; i < numArray.length ; i++){
-    sum += numArray[i];
-    }
+        for(let i = 0; i < numArray.length ; i++){
+            sum += numArray[i];
+        }
+    } 
     return sum;
-    }
+    
    
 }
 
@@ -56,15 +58,16 @@ const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 
 function averageNumbers(numberArray){
+    let sum = 0;
+
     if(numberArray.length !== 0){
-      let sum = 0;
       for(let i = 0; i < numberArray.length; i++){
         sum += numberArray[i];
       }
-      const average = sum / numberArray.length;
-     return average;
+        const average = sum / numberArray.length;
+        return average;
     } 
-    return null;
+    return 0;
     }
    
 
