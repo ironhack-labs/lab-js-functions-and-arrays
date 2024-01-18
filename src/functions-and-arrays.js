@@ -10,7 +10,7 @@ const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard",
 function findLongestWord(words) {
     const lengthArray = [];
     if (words.length === 0) {
-        return 0;
+        return null;
     }
     else {
         for (i = 0; i < words.length; i++) {
@@ -50,7 +50,7 @@ function averageNumbers(numbers2) {
     let total = 0;
     const arraySize = numbers2.length;
     if (arraySize === 0) {
-        return 0;
+        return null;
     }
     else if (arraySize === 1) {
         return numbers2[0];
