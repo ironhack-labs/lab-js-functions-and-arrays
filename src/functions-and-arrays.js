@@ -48,10 +48,11 @@ function sumNumbers(numbers) {
         return 0;
     }
 
-    let countNumber= numbers[] ; // counter init
+    let countNumber= 0;
 
-    for (let i=0; i<numbers.length[]; i++){ // add every number in the array to the counter
-        countNumber++; 
+    for (let i=0; i<numbers.length; i++){ // add every number in the array to the counter
+        let numberToAdd= numbers[i];
+        countNumber += numberToAdd;
     }
 
     return countNumber; // return the total
@@ -64,7 +65,12 @@ function sumNumbers(numbers) {
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbers2) {
+    if (numbers2.length===0){ // should return 0 if the array is empty
+        return 0;
+    }
 
+    let average= sumNumbers(numbers2)/numbers2.length; // used the previous function
+    return average;
 }
 
 
@@ -72,5 +78,17 @@ function averageNumbers(numbers2) {
 
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
+let wordToSearch= '';
 
-function doesWordExist() {}
+function doesWordExist(words2, wordToSearch) {
+    
+    if (words2.length===0){ // should return 0 if the array is empty
+        return null;
+    } else if (words2.includes(wordToSearch)) {
+        return true; // should return true if the word to search is in the array
+    } else {
+        return false; // should return false if not
+    }
+
+
+}
