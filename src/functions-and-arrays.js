@@ -21,21 +21,18 @@ const words = [
 ];
 
 function findLongestWord(array) {
-  // let charCount = 0;
-  // for (let i=0; i <= array.length-1; i++) {
-  //     let first = words[i].length
-  //     let sec  = words[i+1].length
-  //     if (words[i+1] === undefined) {
-  //         sec = words[i].length
-  //     } else if (array[i].length > array[i+1].length ) {
-  //         charCount = i
-  //     }
-  // };
-  // console.log(charCount)
+  if (array.length === 0) { return 0}
+  let longestWord = '';
+
+  for (let i = 0; i <= array.length - 1; i++) {
+    if (array[i].length > longestWord.length) {
+      longestWord = array[i];
+    }
+  }
+  console.log(longestWord);
+  return longestWord;
 }
 
-const winner = findLongestWord(words);
-console.log("Winner:", winner);
 
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -72,47 +69,19 @@ const words2 = [
 ];
 
 function doesWordExist(array, searchedWord) {
-//   console.log(searchedWord);
-//   let state;
-//   array.forEach(function (element) {
-//     console.log("Elelemt:", element);
-//     if (element === 0) {
-//       console.log("Zusand: NULL");
-//       state = null;
-//     }
-//     if (searchedWord === element) {
-//       console.log("Zusand: true");
-//       state = true;
-//     } else if (searchedWord !== element){
-//         state = false
-//     }
-//   });
+    if (array.length === 0) {return null}
 
-//   if (state === true) {
-//     return true;
-//   } else if (state === null || state === undefined) {
-//     return null
-//   } else if (!state) {
-//     return false
-//   }
-    for( const word of array) {
+    let existens = array.includes(searchedWord);
 
-        switch(searchedWord){
-            case searchedWord === word || word === undefined:
-                return true
-                break
-            case array === 0:
-                return null;
-                break
-            case word !== searchedWord:
-                return false;
-            default:
-                return false
-                break
-        }
-
-
+    if (existens) {
+      return true
+    } else if(!existens) {
+      return false
     }
-}
 
-console.log(doesWordExist(words2, "subset"));
+
+    
+
+}
+doesWordExist(words2, "subset")
+
