@@ -53,7 +53,19 @@ function sumNumbers(arr) {
 
 ////////// Iteration 4 | Numbers Average ///////////
 
+const numbersArr2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function averageNumbers(arr) {
+    if (arr.length === 0) {
+        return 0
+    }
+    let average = 0;
+    
+    const total = sumNumbers(arr)
+    average += total / arr.length
+
+    return average
+}
 
 
 ////////// Iteration 5 | Find Elements ////////////
