@@ -1,5 +1,15 @@
 // Iteration 1 | Find the Maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a, b) {
+    if(a > b){
+        return a;
+    }
+    else if (a === b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
 
 
 
@@ -7,15 +17,38 @@ function maxOfTwoNumbers() {}
 // Iteration 2 | Find the Longest Word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
-function findLongestWord() {}
+function findLongestWord(array) {
+let longestWord = array[0];
+if(array.length === 0){
+    return 0;
+}
+for(let i = 0; i < array.length; i++){
+    if(array[i].length > longestWord.length){
 
+    longestWord = array[i];
+}
+}
+return longestWord;
+}
 
+findLongestWord(words);
 
 
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numArray) {
+    let sum = 0;
+
+    if(numArray.length !== 0){
+        for(let i = 0; i < numArray.length ; i++){
+            sum += numArray[i];
+        }
+    } 
+    return sum;
+    
+   
+}
 
 
 
@@ -23,7 +56,20 @@ function sumNumbers() {}
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+
+function averageNumbers(numberArray){
+    let sum = 0;
+
+    if(numberArray.length !== 0){
+      for(let i = 0; i < numberArray.length; i++){
+        sum += numberArray[i];
+      }
+        const average = sum / numberArray.length;
+        return average;
+    } 
+    return 0;
+    }
+   
 
 
 
@@ -31,4 +77,18 @@ function averageNumbers() {}
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(array, wordToSearch) {
+    if(array.length === 0){
+        return null;
+    }
+
+    for(let i = 0; i < array.length; i++){
+        if(wordToSearch === array[i]){
+        return true;
+        }
+    }
+
+    
+            return false;
+        }
+
