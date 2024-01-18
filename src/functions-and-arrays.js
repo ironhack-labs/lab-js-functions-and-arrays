@@ -4,7 +4,7 @@ function maxOfTwoNumbers(a, b) {
         return a;
     }
     else if (a === b){
-        return a, b;
+        return a;
     }
     else{
         return b;
@@ -20,7 +20,7 @@ const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard",
 function findLongestWord(array) {
 let longestWord = array[0];
 if(array.length === 0){
-    return 0;
+    return null;
 }
 for(let i = 0; i < array.length; i++){
     if(array[i].length > longestWord.length){
@@ -45,9 +45,7 @@ function sumNumbers(numArray) {
     }
     return sum;
     }
-    if(numArray.length === 0){
-        return 0;
-    }
+   
 }
 
 
@@ -66,13 +64,9 @@ function averageNumbers(numberArray){
       const average = sum / numberArray.length;
      return average;
     } 
-     else if(numberArray.length === 1){
-     return numberArray[0];  
-     }
-    else if (numberArray.length === 0){
-    return 0;  
+    return null;
     }
-   }
+   
 
 
 
