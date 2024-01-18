@@ -70,4 +70,4 @@ function doesWordExist(arr, word) {
   return arrayToLowerCase.includes(wordToLowerCase);
 }
 
-console.log(doesWordExist(words2, 'TRUTH'));
+// console.log(doesWordExist(words2, 'TRUTH'));
