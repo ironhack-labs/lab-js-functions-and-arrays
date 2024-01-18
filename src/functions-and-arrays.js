@@ -26,7 +26,7 @@ function findLongestWord(words) {
     }
     let longestWord= words[0]; // initiate the counter with the first word in the array
 
-    for (i=1; i<words.length; i++){
+    for (let i=1; i<words.length; i++){
         let inProgress=words[i]; // make counter compare the actual word with the next
 
         if (inProgress.length>longestWord.length){ 
@@ -42,7 +42,20 @@ function findLongestWord(words) {
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
+
+    if (numbers.length===0){ // should return 0 if the array is empty
+        return 0;
+    }
+
+    let countNumber= numbers[] ; // counter init
+
+    for (let i=0; i<numbers.length[]; i++){ // add every number in the array to the counter
+        countNumber++; 
+    }
+
+    return countNumber; // return the total
+}
 
 
 
@@ -50,7 +63,9 @@ function sumNumbers() {}
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers2) {
+
+}
 
 
 
