@@ -60,7 +60,7 @@ function averageNumbers(arr) {
         return 0
     }
     let average = 0;
-    
+
     const total = sumNumbers(arr)
     average += total / arr.length
 
@@ -69,3 +69,25 @@ function averageNumbers(arr) {
 
 
 ////////// Iteration 5 | Find Elements ////////////
+
+const wordsArr2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
+
+function doesWordExist(arr, word) {
+    // return true if word exist
+    // otherwise return false
+    if (arr.length === 0) {
+        return null
+    }
+    
+    let compare;
+    for (let i = 0; i < arr.length; i++) {
+        compare = word.localeCompare(arr[i])
+        if (compare === 0) {
+            console.log("found")
+            return true;
+        }
+    }
+    if (compare != 0) {
+        return false
+    }
+}
