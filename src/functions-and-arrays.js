@@ -75,5 +75,3 @@ function doesWordExist(words, word) {
     }
     return answer
 }
-console.log("hello world")
-console.log("hello world")
