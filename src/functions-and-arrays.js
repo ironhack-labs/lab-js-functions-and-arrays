@@ -52,14 +52,10 @@ function averageNumbers(nbrs) {
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
 function doesWordExist(srcWord, word) {
-    if (srcWord.length === 0){
-      return null;
-    }
-  for (let i = 0; i < srcWord.length; i++) {
-    if(srcWord.includes(word)){
-      return true;
-    } else {
-      return false;
-    }
+  if (srcWord.length === 0){
+    return null;
   }
-  }
+  return srcWord.includes(word);
+}
+
+  
