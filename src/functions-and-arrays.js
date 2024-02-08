@@ -64,6 +64,8 @@ function doesWordExist(arr, word) {
     }
     if (arr.includes(word)) {
         return true
+    } else {
+        return false
     }
 }
 console.log(doesWordExist(words2, "trouble"));
