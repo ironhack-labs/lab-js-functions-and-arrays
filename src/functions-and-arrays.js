@@ -53,15 +53,10 @@ function sumNumbers(arr) {
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arr) {
-  let sum = 0;
+  let sum = sumNumbers(arr);
 
   if (arr.length === 0) {
     return 0;
-  }
-
-  for (let i = 0; i < arr.length; i++) {
-    let num = arr[i];
-    sum += num;
   }
 
   return sum / arr.length;
