@@ -17,15 +17,14 @@ function findLongestWord(words) {
     }
     const maxLength = Math.max(...wordsLength) 
 
-    if (words.length > 0) {
-        for (j = 0; j < words.length; j++) {     
-            if (words[j].length === maxLength) {
-                longestWord = words[j]
-                break;    
-            }
+    for (j = 0; j < words.length; j++) {     
+        if (words[j].length === maxLength) {
+            longestWord = words[j]
+            break;    
         }
-    } else longestWord = 0       
-    return longestWord
+    }   
+    
+    return longestWord ? longestWord : 0 //return 0 if longestWord = "" (falsey) //This method is called ternary operator
 }
 
 // Iteration 3 | Sum Numbers
@@ -58,16 +57,20 @@ console.log(averageNumbers(num))
 
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
-const searchFor = "Jose"
+const words1 = []
+const searchFor = "subset"
 
-function doesWordExist(words2, searchFor) {
+function doesWordExist(words, searchFor) {
     let result = false
-    for (i = 0; i < words2.length; i++) {
-     if (searchFor === words2[i]) {
+    if (!words.length) {
+        result = null
+    }
+    for (i = 0; i < words.length; i++) {
+     if (searchFor === words[i]) {
        result = true
      }
     }
-    return result
+    return result 
 }
 
-console.log(doesWordExist(words2, searchFor))
+console.log(doesWordExist(words1, searchFor));
