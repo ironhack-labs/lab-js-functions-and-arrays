@@ -34,7 +34,13 @@ const findLongestWord = (arrayOfWords) => {
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arrayOfNumbers) {
+  let total = 0;
+  arrayOfNumbers.forEach((number) => {
+    total += number;
+  });
+  return total;
+}
 
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
@@ -54,3 +60,14 @@ const words2 = [
 ];
 
 function doesWordExist() {}
+
+// const testWord = [
+//   "mystery",
+//   "brother",
+//   "aviator",
+//   "crocodile",
+//   "pearlaere1",
+//   "pearlaere2",
+//   "pearlaere35",
+// ];
+// console.log(findLongestWord(testWord)); // Output: crocodile
