@@ -52,7 +52,16 @@ function sumNumbers(array) {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(array) {
+  if (array.length == 0) {
+    return 0;
+  }
+  let average = 0;
+  array.forEach((element) => {
+    average += element;
+  });
+  return average / array.length;
+}
 
 // Iteration 5 | Find Elements
 const words2 = [
