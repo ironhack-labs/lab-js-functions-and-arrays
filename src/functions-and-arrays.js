@@ -75,4 +75,19 @@ const words2 = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+let searchedWord = words2[i];
+
+function doesWordExist(array, searchedWord) {
+  if (array.length == 0) {
+    return null;
+  }
+  let searchedWord = "";
+  array.forEach((element) => {
+    searchedWord = element;
+  });
+  return true;
+}
+
+const result3 = doesWordExist(words2);
+console.log(result3);
+console.log(searchedWord);
