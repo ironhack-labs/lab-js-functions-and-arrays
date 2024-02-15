@@ -12,100 +12,57 @@ const shuffle = (currentArray) => {
   return array;
 };
 
-describe("Iteration 1 | Find the maximum", () => {
-  describe("function maxOfTwoNumbers()", () => {
-    it("should be defined as a function", () => {
-      expect(typeof maxOfTwoNumbers).toBe("function");
-    });
+// Iteration 1 
+function maxOfTwoNumbers(num1,num2) {
+  return num1 >= num2 ? num1 : num2
+}
+const maxOfTwoNumbers = (num1,num2) => num1 >= num2 ? num1 : num2
 
-    it("should return greater of two arguments - if the first argument greater", () => {
-      expect(maxOfTwoNumbers(2, 1)).toBe(2);
-      expect(maxOfTwoNumbers(5, -7)).toBe(5);
-    });
+// Iteration 2 
+const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
-    it("should return greater of two arguments - if the second argument greater", () => {
-      expect(maxOfTwoNumbers(1, 3)).toBe(3);
-      expect(maxOfTwoNumbers(-5, 3)).toBe(3);
-    });
+function findLongestWord(arrayOfWords) {
+  if (arrayOfWords.length === 0) return 0
+  let longestWord = ''
+  for (const word of arrayOfWords) {
+      if (word.length > longestWord.length) {longestWord = word}
+  }
+  return longestWord
+}
+const findLongestWord = arrayOfWords => 
+  arrayOfWords.reduce((a,b) => a.length >= b.length ? a : b, '') || 0
 
-    it("should return either arguments - if both arguments are equal", () => {
-      expect(maxOfTwoNumbers(4, 4)).toBe(4);
-    });
-  });
-});
+// Iteration 3 
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-
-describe("Iteration 2 | Find the Longest Word", () => {
-  describe("function findLongestWord()", () => {
-    it("should be defined as a function", () => {
-      expect(typeof findLongestWord).toBe("function");
-    });
-
-    it("should return the longest word when called with an array of words", () => {
-      let words = ["a", "zab", "12abc", "$$abcd", "abcde", "ironhack"];
-      for (let i = 0; i < 10; i++) {
-        words = shuffle(words);
-        expect(findLongestWord(words)).toBe("ironhack");
-      }
-    });
-
-    it("should return 0 when called with an empty array", () => {
-      expect(findLongestWord([])).toBe(0);
-    });
-
-    it("should return the first word when called with a single-word array", () => {
-      expect(findLongestWord(["foo"])).toBe("foo");
-    });
-
-    it("should return the first occuring longest word when there are multiple words with the same length", () => {
-      expect(findLongestWord(["foo", "bar"])).toBe("foo");
-      expect(findLongestWord(["bar", "foo"])).toBe("bar");
-    });
-
-  });
-});
+function sumNumbers(arrayOfNumbers) {
+  return arrayOfNumbers.reduce((a,b) => a + b, 0)
+}
+const sumNumbers = arrayOfNumbers => arrayOfNumbers.reduce((a,b) => a + b, 0)
 
 
-describe("Iteration 3 | Sum Numbers", () => {
-  describe("function sumNumbers()", () => {
-    it("should be defined as a function", () => {
-      expect(typeof sumNumbers).toBe("function");
-    });
+// Iteration 4 
+const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-    it("should return the sum when passed an array of numbers", () => {
-      expect(sumNumbers([10, 5, 4, 32, 8])).toBe(59);
-    });
+function averageNumbers(arrayOfNumbers) {
+  if (arrayOfNumbers.length === 0) return 0
+  return sumNumbers(arrayOfNumbers) / arrayOfNumbers.length
+}
+const averageNumbers = arrayOfNumbers =>
+  sumNumbers(arrayOfNumbers) / arrayOfNumbers.length || 0
 
-    it("should return 0 when called with an empty array", () => {
-      expect(sumNumbers([])).toBe(0);
-    });
+// Iteration 5
+const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-    it("should return the first number when called with a single-element array", () => {
-      expect(sumNumbers([4])).toBe(4);
-    });
-  });
-});
+function doesWordExist(arrayOfWords, searchString) {
+  if (arrayOfWords.length === 0) return null
+  return arrayOfWords.includes(searchString)
+}
+const doesWordExist = (arrayOfWords, searchString) =>
+  !arrayOfWords.length ? null : arrayOfWords.some((word) => word === searchString)
 
-
-describe("Iteration 4 | Numbers Average", () => {
-  describe("function averageNumbers()", () => {
-    it("should be defined as a function", () => {
-      expect(typeof averageNumbers).toBe("function");
-    });
-
-    it("should return the average number when passed an array of numbers", () => {
-      expect(averageNumbers([9, 10, 82, 92, 32, 102, 58])).toBe(55);
-    });
-
-    it("should return 0 if receives an empty array when called", () => {
-      expect(averageNumbers([])).toBe(0);
-    });
-
-    it("should return the average when called with a single-element array", () => {
-      expect(averageNumbers([9])).toBe(9);
-    });
-  });
-});
+Footer
+© 2024 GitHub, Inc.
 
 
 describe("Iteration 5 | Find Elements", () => {
