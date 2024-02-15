@@ -65,15 +65,15 @@ const words2 = [
   "disobedience",
 ];
 
-function doesWordExist() {}
-
-// const testWord = [
-//   "mystery",
-//   "brother",
-//   "aviator",
-//   "crocodile",
-//   "pearlaere1",
-//   "pearlaere2",
-//   "pearlaere35",
-// ];
-// console.log(findLongestWord(testWord)); // Output: crocodile
+function doesWordExist(words2, searchedWord) {
+  if (words2.length === 0) {
+    return null;
+  }
+  let doesExist = false;
+  words2.forEach((word) => {
+    if (word === searchedWord) {
+      doesExist = true;
+    }
+  });
+  return doesExist;
+}
