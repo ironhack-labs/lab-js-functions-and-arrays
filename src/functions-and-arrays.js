@@ -38,9 +38,11 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(arr) {
 
     let sum = 0;
-    arr.forEach(e => {
-        sum += e;
-    })
+    // arr.forEach(e => {
+    //     sum += e;
+    // })
+    sum = arr.reduce((total, current) =>
+        total + current, 0)
     return sum;
 }
 
