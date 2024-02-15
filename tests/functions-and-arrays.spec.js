@@ -34,7 +34,6 @@ describe("Iteration 1 | Find the maximum", () => {
   });
 });
 
-
 describe("Iteration 2 | Find the Longest Word", () => {
   describe("function findLongestWord()", () => {
     it("should be defined as a function", () => {
@@ -42,7 +41,7 @@ describe("Iteration 2 | Find the Longest Word", () => {
     });
 
     it("should return the longest word when called with an array of words", () => {
-      let words = ["a", "zab", "12abc", "$$abcd", "abcde", "ironhack"];
+      let words = ["a", "zab", "12abc", "$$abcd", "abcd", "ironhack"];
       for (let i = 0; i < 10; i++) {
         words = shuffle(words);
         expect(findLongestWord(words)).toBe("ironhack");
@@ -61,10 +60,8 @@ describe("Iteration 2 | Find the Longest Word", () => {
       expect(findLongestWord(["foo", "bar"])).toBe("foo");
       expect(findLongestWord(["bar", "foo"])).toBe("bar");
     });
-
   });
 });
-
 
 describe("Iteration 3 | Sum Numbers", () => {
   describe("function sumNumbers()", () => {
@@ -86,7 +83,6 @@ describe("Iteration 3 | Sum Numbers", () => {
   });
 });
 
-
 describe("Iteration 4 | Numbers Average", () => {
   describe("function averageNumbers()", () => {
     it("should be defined as a function", () => {
@@ -106,7 +102,6 @@ describe("Iteration 4 | Numbers Average", () => {
     });
   });
 });
-
 
 describe("Iteration 5 | Find Elements", () => {
   describe("function doesWordExist()", () => {
