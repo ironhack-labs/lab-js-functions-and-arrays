@@ -41,7 +41,13 @@ console.log(resultEmpty);
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(array) {
+  let total = 0;
+  array.forEach((element) => {
+    total += element;
+  });
+  return total;
+}
 
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
