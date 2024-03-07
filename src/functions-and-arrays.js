@@ -18,7 +18,7 @@ function findLongestWord(words) {
         return null;
     }
     let longestWord = words[0];
-    for(let i = 0; i < words.length; i++) {
+    for(let i = 1; i < words.length; i++) {
         if (words[i].length> longestWord.length) {
             longestWord = words[i];
         }
@@ -32,10 +32,10 @@ function findLongestWord(words) {
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {
-    let sum = O;
-    for(let i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
+function sumNumbers(numberArr) {
+    let sum = 0;
+    for(let i = 0; i < numberArr.length; i++) {
+        sum += numberArr[i];
     }
     return sum; 
 }
@@ -46,13 +46,13 @@ function sumNumbers() {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {
-    let sumNUm = 0; 
+function averageNumbers(numOfArray) {
+    let sumNum = 0; 
     let averageNum = 0;
-    for (i = 0; i < numbers2.length; i++) {
-        sumNUm += numbers2[i];
+    for (i = 0; i < numOfArray.length; i++) {
+        sumNum += numOfArray[i];
     }
-    averageNum = sumNUm / numbers2.length; 
+    averageNum = sumNum / numOfArray.length; 
     return averageNum;
 }
 
@@ -62,9 +62,9 @@ function averageNumbers() {
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist(existedWord) {
-for (let i = 0; i < words2.length; i++) {
-    if (existedWord === words2[i]) {
+function doesWordExist(wordInArr, wordToCheck) {
+for (let i = 0; i < wordInArr.length; i++) {
+    if (wordInArr[i] === wordToCheck) {
         return true;
     }
 }
