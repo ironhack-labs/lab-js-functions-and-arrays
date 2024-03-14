@@ -1,12 +1,6 @@
 // Iteration 1 | Find the Maximum
 function maxOfTwoNumbers(num1, num2) {
-  if (num1 > num2) {
-    return num1;
-  }
-  if (num1 < num2) {
-    return num2;
-  }
-  return num1;
+  return num1 > num2 ? num1 : num2;
 }
 
 // Iteration 2 | Find the Longest Word
@@ -20,22 +14,14 @@ const words = [
   "crackpot",
 ];
 
-function findLongestWord(words) {
-  let longestWord;
-  if (words.length == 0) {
-    return null;
-  }
-
-  words.forEach((word) => {
-    if (!longestWord) {
-      longestWord = word;
-    } else {
-      if (longestWord.length < word.length) {
-        longestWord = word;
-      }
+function findLongestWord(wordsArr) {
+  if (!wordsArr.length) return 0;
+  let longestWord = wordsArr[0];
+  for (let i = 1; i < wordsArr.length; i++) {
+    if (wordsArr[i].length > longestWord.length) {
+      longestWord = wordsArr[i];
     }
-  });
-
+  }
   return longestWord;
 }
 
@@ -57,7 +43,7 @@ const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(numbers) {
   let sumNumbers = 0;
   if (numbers.length == 0) {
-    return null;
+    return 0;
   }
   let countNumbersArray = numbers.length;
   numbers.forEach((number) => {
@@ -79,15 +65,6 @@ const words2 = [
   "disobedience",
 ];
 
-function doesWordExist(words2, word) {
-  if (words2.length == 0) {
-    return null;
-  }
-  for (let wordElement of words2) {
-    if (wordElement === word) {
-      return true;
-    }
-  }
-
-  return false;
+function doesWordExist(wordsArray, wordToFind) {
+  return wordsArray.length > 0 ? wordsArray.includes(wordToFind) : null;
 }
