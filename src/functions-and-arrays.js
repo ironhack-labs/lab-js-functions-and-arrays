@@ -87,7 +87,6 @@ function doesWordExist(wordArray, word) {
         return true;
       }
     }
-
     return false;
   } else {
     return null;
