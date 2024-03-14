@@ -23,7 +23,7 @@ const words = [
 function findLongestWord(words) {
   let longestWord;
   if (words.length == 0) {
-    return 0;
+    return null;
   }
 
   words.forEach((word) => {
@@ -47,7 +47,6 @@ function sumNumbers(numbers) {
   numbers.forEach((number) => {
     sumNumbers += number;
   });
-  console.log(sumNumbers);
 
   return sumNumbers;
 }
@@ -58,13 +57,12 @@ const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(numbers) {
   let sumNumbers = 0;
   if (numbers.length == 0) {
-    return 0;
+    return null;
   }
   let countNumbersArray = numbers.length;
   numbers.forEach((number) => {
     sumNumbers += number;
   });
-  console.log(sumNumbers);
 
   return sumNumbers / countNumbersArray;
 }
@@ -86,13 +84,10 @@ function doesWordExist(words2, word) {
     return null;
   }
   for (let wordElement of words2) {
-    console.log(wordElement + " " + word);
-    if (wordElement == word) {
+    if (wordElement === word) {
       return true;
     }
   }
 
   return false;
 }
-
-console.log(doesWordExist(words2, "trouble"));
