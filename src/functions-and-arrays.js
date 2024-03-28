@@ -20,7 +20,7 @@ function findLongestWord(arr) {
   }
 
   let word = "";
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (word.length < arr[i].length) {
       word = arr[i];
     }
@@ -75,3 +75,12 @@ function doesWordExist(enterArray, searchedWord) {
     }
   }
 }
+
+// better solution:
+
+// for (let i = 0; i < enterArray.length; i++) {
+//   if (enterArray[i] === searchedWord) {
+//     return true;
+//   }
+// }
+// return false;
