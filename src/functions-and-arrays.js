@@ -81,16 +81,17 @@ function doesWordExist(wordsArray, searchTerm) {
   if (wordsArray.length === 0) {
     return null;
   } else {
-    let searchCount = 0;
-    for (let i = 0; i < wordsArray.length; i++) {
-      if (wordsArray[i] === searchTerm) {
-        searchCount++;
-      }
-    }
-    if (searchCount === 0) {
-      return false;
-    } else {
-      return true;
-    }
+    // let searchCount = 0;
+    // for (let i = 0; i < wordsArray.length; i++) {
+    //   if (wordsArray[i] === searchTerm) {
+    //     searchCount++;
+    //   }
+    // }
+    // if (searchCount === 0) {
+    //   return false;
+    // } else {
+    //   return true;
+    // }
+    return wordsArray.includes(searchTerm);
   }
 }
