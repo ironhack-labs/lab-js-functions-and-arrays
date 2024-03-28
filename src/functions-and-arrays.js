@@ -81,14 +81,12 @@ const words2 = [
 console.log(doesWordExist(words2, "machine"));
 
 function doesWordExist(arr, str) {
-  if (!arr.length) return null;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.includes(str)) {
-      return true;
-    } else {
-      return false;
-    }
+  if (!arr.length) {
+    return null;
+  } else if (arr.includes(str)) {
+    return true;
   }
+  return false;
 }
 
 doesWordExist(words2, str);
