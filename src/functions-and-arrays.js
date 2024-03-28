@@ -50,7 +50,7 @@ const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arr) {
     if (arr.length == 0) {
-        return null
+        return 0
     } else {
         let average = sumNumbers(arr) / arr.length;
         return average;
