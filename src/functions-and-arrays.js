@@ -18,9 +18,25 @@ maxOfTwoNumbers(2,3);
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
 function findLongestWord(words) {
+let result;
+let word;
 
+
+if(words.length == 0){
+    result = null;
+}
+
+for(let i = 0; i < words.length; i++){
+    word = words[i];
+    if(words.length < word.length){
+        result = word;
+    }
+    
+}
+return result;
 }
 findLongestWord(words);
+
 
 
 
@@ -67,8 +83,26 @@ averageNumbers(numbers2);
 
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
+const word = "machine";
 
-function doesWordExist(words2) {
+function doesWordExist(words2, word) {
+    
+    let result;
+    for(let i = 0; i <words2.length; i++){
+        if(word === words2[i]){
+            result = true;
+            break;
+        } else {
+            result = false;
+        }
+    }
+    if(words2.length === 0){
+        result = null;
+    }
+    return result;
 
+    
 }
-doesWordExist(words2);
+doesWordExist(words2, word);
+
+
