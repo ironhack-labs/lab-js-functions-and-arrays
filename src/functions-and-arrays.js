@@ -9,12 +9,27 @@ function maxOfTwoNumbers(a,b) {
 // Iteration 2 | Find the Longest Word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
+// function findLongestWord(words) {
+//     let longestWord = "";
+
+//     if(words.length === 0) return null;
+
+//     words.forEach(function (element){
+//     if(element.length>longestWord.length) longestWord = element;   
+//     })
+//     return longestWord;
+// }
+
+// with arrow function
+
 function findLongestWord(words) {
     let longestWord = "";
 
     if(words.length === 0) return null;
 
-    words.forEach(function (element){
+    // if only one argument we can leave out the parentheses 
+
+    words.forEach(element => {
     if(element.length>longestWord.length) longestWord = element;   
     })
     return longestWord;
@@ -22,17 +37,26 @@ function findLongestWord(words) {
 
 
 
-
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
+// function sumNumbers(array) {
+//     let result = 0;
+//     array.forEach(function (element){
+//         result += element;
+//     })
+//     return result;
+// }
+
+
+// with reduce + arrow function
+
 function sumNumbers(array) {
-    let result = 0;
-    array.forEach(function (element){
-        result += element;
-    })
+    // we can leave out the curly brackets because its a one-liner
+    let result = array.reduce((acc, cur) => acc+cur, 0)
     return result;
 }
+
 
 
 
@@ -51,11 +75,20 @@ function averageNumbers(array) {
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
+// iterate through each element:
+
+// function doesWordExist(array, searchWord) {
+//     if(array.length === 0) return null;
+//     let result = false;
+//     array.forEach(function (element){
+//         if(element === searchWord) result = true;
+//     })
+//     return result;
+// }
+
+// shortest version possible: 
+
 function doesWordExist(array, searchWord) {
     if(array.length === 0) return null;
-    let result = false;
-    array.forEach(function (element){
-        if(element === searchWord) result = true;
-    })
-    return result;
+    return array.includes(searchWord);
 }
