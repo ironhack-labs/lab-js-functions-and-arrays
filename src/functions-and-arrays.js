@@ -66,7 +66,7 @@ function averageNumbers(arrSum) {
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
 function doesWordExist(array, word) {
-  const emptyArr = []
+
   if (array.includes(word)) {
     return true
   } else if (array.length === 0) {
