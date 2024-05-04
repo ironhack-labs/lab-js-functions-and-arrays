@@ -82,8 +82,4 @@ function doesWordExist(wordExist, wordSearch) {
         return null
     } 
     
-    else if( ){
-        emptyArray = true
-    }
-
 }
