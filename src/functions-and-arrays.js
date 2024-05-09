@@ -94,9 +94,6 @@ function doesWordExist(arr, word) {
             wordExists = true;
             break;
         }
-        else{
-            continue;
-        }
     }
     return wordExists;
 }
