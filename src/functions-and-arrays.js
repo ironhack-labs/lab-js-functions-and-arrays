@@ -83,4 +83,19 @@ const words2 = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+function doesWordExist(arr, word) {
+    if (arr.length === 0) {
+        return null;
+      }
+    let wordExists = false;
+    for (let i=0; i<arr.length; i++) {
+        if (arr[i] === word){
+            wordExists = true;
+            break;
+        }
+        else{
+            continue;
+        }
+    }
+    return wordExists;
+}
