@@ -22,20 +22,21 @@ const words = [
 ];
 
 function findLongestWord(arr) {
-  let longestWord = "";
 
   if (arr.length === 0) {
     return null;
   }
-
+  else if (arr.length === 1) {
+    return arr[0];
+  }
+  
+  let longestWord = "";
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length === longestWord.length) {
       continue;
     } else if (arr[i].length > longestWord.length) {
       longestWord = arr[i];
-    } else if (arr.length === 1) {
-      longestWord = arr[0];
-    }
+    } 
   }
 
   return longestWord;
