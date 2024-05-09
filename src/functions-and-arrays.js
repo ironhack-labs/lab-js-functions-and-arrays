@@ -59,7 +59,17 @@ function sumNumbers(arr) {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arr) {
+    if (arr.length === 0) {
+        return 0;
+        }
+
+    let sum = 0
+    for (let i=0; i<arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum/arr.length
+}
 
 // Iteration 5 | Find Elements
 const words2 = [
