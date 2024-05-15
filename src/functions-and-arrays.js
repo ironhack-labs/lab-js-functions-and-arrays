@@ -1,26 +1,9 @@
-// Iteration 1 | Find the Maximum
+// // Iteration 1 | Find the Maximum
 function maxOfTwoNumbers(num1, num2) {
-  if (num1 < num2) {
-    return `${num2} is bigger!`;
-  } else if (num1 > num2) {
-    return `${num1} is biger!`;
-  } else {
-    return "Woho! both numbers are equal!";
-  }
+  return num1 > num2 ? num1 : num2;
 }
 
-console.log(maxOfTwoNumbers(5, 7));
-
-// Iteration 2 | Find the Longest Word
-const words = [
-  "mystery",
-  "brother",
-  "aviator",
-  "crocodile",
-  "pearl",
-  "orchard",
-  "crackpot",
-];
+// // Iteration 2 | Find the Longest Word
 
 function findLongestWord(words) {
   if (words.length === 0) {
@@ -38,10 +21,7 @@ function findLongestWord(words) {
   return longestWord;
 }
 
-console.log(findLongestWord(words)); // Output will be "crocodile"
-
-// Iteration 3 | Sum Numbers
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+// // Iteration 3 | Sum Numbers
 
 function sumNumbers(numbers) {
   let sum = 0;
@@ -53,10 +33,7 @@ function sumNumbers(numbers) {
   return sum;
 }
 
-console.log(sumNumbers(numbers)); // Output will be 87
-
-// Iteration 4 | Numbers Average
-const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
+// // Iteration 4 | Numbers Average
 
 function sumNumbers(numbers) {
   let sum = 0;
@@ -68,30 +45,18 @@ function sumNumbers(numbers) {
 
 function averageNumbers(numbers) {
   if (numbers.length === 0) {
-    return null; // Returning null for an empty array
+    return null;
   }
 
   const sum = sumNumbers(numbers);
   return sum / numbers.length;
 }
 
-console.log(averageNumbers(numbers2)); // Output will be 5.375
-
-// Iteration 5 | Find Elements
-const words2 = [
-  "machine",
-  "subset",
-  "trouble",
-  "starting",
-  "matter",
-  "eating",
-  "truth",
-  "disobedience",
-];
+// // Iteration 5 | Find Elements
 
 function doesWordExist(words, wordToSearch) {
   if (words.length === 0) {
-    return null; // Returning null for an empty array
+    return null;
   }
 
   for (let i = 0; i < words.length; i++) {
@@ -102,6 +67,3 @@ function doesWordExist(words, wordToSearch) {
 
   return false;
 }
-
-console.log(doesWordExist(words2, "machine")); // Output will be true
-console.log(doesWordExist(words2, "apple")); // Output will be false
