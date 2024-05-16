@@ -79,9 +79,7 @@ function doesWordExist(wordsArray, searchedWord) {
     return null;
   }
   for (let i = 0; i < wordsArray.length; i++) {
-    console.log("kpok", wordsArray[i]);
     if (wordsArray[i] === searchedWord) {
-      console.log(wordsArray[i]);
       return true;
     }
   }
