@@ -2,14 +2,13 @@
 function maxOfTwoNumbers(a, b) {
     return a < b ? b : a;
 }
-console.log(maxOfTwoNumbers(50, 10));
 
 // Iteration 2 | Find the Longest Word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
 function findLongestWord(words) {
     let longestWord = "";
-    if (!words) {
+    if (words.length === 0) {
         return null;
     }
     for (let index = 0; index < words.length; index++) {
@@ -17,7 +16,6 @@ function findLongestWord(words) {
     }
     return longestWord;
 }
-console.log(findLongestWord(words));
 
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
@@ -29,22 +27,23 @@ function sumNumbers(numbers) {
     }
     return sum;
 }
-console.log(sumNumbers(numbers));
 
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers(numbers2) {
-    const sum = sumNumbers(numbers2);
-    return sum / numbers2.length;
+function averageNumbers(numbers) {
+    if (numbers.length === 0) {
+        return 0;
+    }
+    const sum = sumNumbers(numbers);
+    return sum / numbers.length;
 }
-console.log(averageNumbers(numbers2));
 
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
 function doesWordExist(words, word) {
-    if (!words) {
+    if (words.length === 0) {
         return null;
     }
     for (let index = 0; index < words.length; index++) {
@@ -54,4 +53,3 @@ function doesWordExist(words, word) {
     }
     return false;
 }
-console.log(doesWordExist(words2, "subsets"));
