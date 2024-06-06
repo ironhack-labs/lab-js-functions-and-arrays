@@ -32,16 +32,18 @@ function findLongestWord(wordsArr) {
     
     // check if array provided, and is not empty
     if (!wordsArr || wordsArr.length < 1) {
-        return null
+        return null;
     }
     // keep track of current longest word
     let longestWord = "";
-    // use for..of loop to determine longest word
-    for (const word of wordsArr) {
+
+    // use forEach method to compare length uf current word to longest word
+    wordsArr.forEach(word => {
         if (word.length > longestWord.length) {
             longestWord = word;
         }
-    }
+    });
+
     return longestWord;
 }
 
@@ -58,10 +60,11 @@ function sumNumbers(numbersArr) {
     }
 
     let sum = 0;
-    // use for..of loop to add values to sum
-    for (const number of numbersArr) {
-        sum += number
-    }
+    
+    // use forEach method to add each nr to sum
+    numbersArr.forEach( number => {
+        sum += number;
+    });
 
     return sum;
 }
