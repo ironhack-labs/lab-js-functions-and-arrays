@@ -3,11 +3,9 @@ function maxOfTwoNumbers(num1, num2) {
     if (num1 > num2) {
         return num1;
 
-    } else if (num2 > num1) {
+    } else if ((num2 > num1)||(num1 === num2)){
         return num2;
-    } else if (num1 === num2) {
-        return num1;
-    }
+    } 
 }
 
 
@@ -32,9 +30,6 @@ function findLongestWord(words) {
     }
     return longestWord;        
 }
-console.log(findLongestWord(words));
-
-
 
 
 
@@ -50,10 +45,8 @@ function sumNumbers(numbers) {
         return numbers[0];
     }
 
-    else {
-        for (let i=0 ; i< numbers.length; i++) {
-            sum = sum + numbers[i];
-        }
+    for (let i=0 ; i< numbers.length; i++) {
+        sum = sum + numbers[i];
     }
 
     return sum;
@@ -73,8 +66,6 @@ function averageNumbers(numbers2) {
     }
     
 }
-
-
 
 
 // Iteration 5 | Find Elements
