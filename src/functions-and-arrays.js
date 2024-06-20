@@ -46,7 +46,19 @@ function sumNumbers(numbersArr) {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbersArr) {
+  let sum = 0;
+  let average = 0;
+
+  numbersArr.forEach((number) => {
+    sum += number;
+    average = sum / numbersArr.length;
+  });
+  return average;
+}
+
+const avg = averageNumbers(numbers2)
+console.log(avg)
 
 // Iteration 5 | Find Elements
 const words2 = [
