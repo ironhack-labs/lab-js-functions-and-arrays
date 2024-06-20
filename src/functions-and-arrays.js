@@ -57,8 +57,8 @@ function averageNumbers(numbersArr) {
   return average;
 }
 
-const avg = averageNumbers(numbers2)
-console.log(avg)
+const avg = averageNumbers(numbers2);
+console.log(avg);
 
 // Iteration 5 | Find Elements
 const words2 = [
@@ -72,4 +72,16 @@ const words2 = [
   "disobedience",
 ];
 
-function doesWordExist() {}
+function doesWordExist(wordsArr, word) {
+  if (!wordsArr.length) {
+    return null;
+  }
+  if (wordsArr.includes(word)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const d = doesWordExist(words2, "machine");
+console.log(d);
