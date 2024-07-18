@@ -1,6 +1,18 @@
 // Iteration 1 | Find the Maximum
-function maxOfTwoNumbers() {}
 
+
+// function calcMult(a, b){
+//     return a * b;
+// }
+
+// calcMult(2, 3)
+
+function maxOfTwoNumbers() {
+    console.log("hello world");
+    // return maxOfTwoNumbers.Math.max()
+}
+
+console.log(3+4);
 
 
 
