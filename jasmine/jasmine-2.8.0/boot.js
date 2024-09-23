@@ -24,6 +24,7 @@
 
   /**
    * Create the Jasmine environment. This is used to run all specs in a project.
+   * 
    */
   var env = jasmine.getEnv();
 
