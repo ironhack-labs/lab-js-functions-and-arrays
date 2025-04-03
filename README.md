@@ -70,7 +70,7 @@ This lab and some labs you will work on during the bootcamp are equipped with un
 
 
 
-### Testing with Jasmine
+### Testing with 
 
 Jasmine is an automated testing framework for JavaScript. It is designed to be used in Behavior-driven Development (**BDD**) programming, focusing more on the business value than the technical details.
 
