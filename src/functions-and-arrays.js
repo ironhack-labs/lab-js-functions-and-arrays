@@ -70,15 +70,31 @@ const words2 = [
 ];
 
 function doesWordExist(arr, word) {
-  if (!arr.length) {
-    return null;
-  }
+//   if (!arr.length) {
+//     return null;
+//   }
 
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i] === word) {
-      console.log(word + " " + arr[i]);
-      return true;
-    }
-  }
-  return false;
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] === word) {
+//       console.log(word + " " + arr[i]);
+//       return true;
+//     }
+//   }
+//   return false;
+
+
+//   let found = false;
+//   arr.forEach(element => {
+//     if (element === word) {
+//       console.log(word + " found");
+//       found = true;
+//     }
+//   });
+//   return found;
+
+
+
 }
+
+
+
