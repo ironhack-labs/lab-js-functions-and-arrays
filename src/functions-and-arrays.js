@@ -53,10 +53,12 @@ const words2 = [
 	'disobedience',
 ]
 
-function doesWordExist(words2, word) {
-	if (words2.length == 0) return null
-	for (let i = 0; i < words2.length; i++) {
-		if (words2[i] === word) return true
-	}
-	return false
+function doesWordExist(words, word) {
+	if (words.length == 0) return null
+	// for (let i = 0; i < words.length; i++) {
+	// 	if (words[i] === word) return true
+	// }
+	// words.map(w => if (w === word) return true)
+	// return false
+	return words.some((w) => w === word)
 }
