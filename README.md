@@ -16,7 +16,7 @@
   - Create and invoke functions in JavaScript.
   - Pass arrays and primitive values as arguments to functions.
   - Use the `return` keyword to return a value from a function.
-  - Access, add, remove, and check for items in an array using the index and array methods (`unshift`, `push`, `splice`, `shift`, `pop`, `indexOf`, and `includes`).
+  - Access, add, remove, and check for items in an array using the index and array methods (`unshift`, `push`, `splice`, `shift`, `pop`, `indexOf`,A and `includes`).
   - Use conditional statements and loops in a function.
 
   <br>
