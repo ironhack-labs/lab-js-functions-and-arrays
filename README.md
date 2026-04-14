@@ -153,6 +153,7 @@ Implement the function `maxOfTwoNumbers` that takes two numbers as arguments and
 <br>
 
 
+ }
 
 ### Iteration 2 | Find the Longest Word
 
