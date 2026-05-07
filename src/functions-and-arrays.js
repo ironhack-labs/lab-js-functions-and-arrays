@@ -51,11 +51,9 @@ const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(arr) {
     if (arr.length === 0){
         return 0
-    } else {
-        const sum = sumNumbers(arr);
-        const average = sum / arr.length;
-        return average;
     }
+    const sum = sumNumbers(arr);
+    return sum / arr.length
 
 }
 
