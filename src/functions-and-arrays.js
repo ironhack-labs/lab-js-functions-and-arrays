@@ -1,12 +1,6 @@
 // Iteration 1 | Find the Maximum
 function maxOfTwoNumbers(number1, number2) {
-    if (number1 > number2) {
-        return number1;
-    } else if (number2 > number1) {
-        return number2;
-    } else {
-        return number1;
-    }
+    return number1 >= number2 ? number1 : number2;
 }
 
 
@@ -15,20 +9,21 @@ function maxOfTwoNumbers(number1, number2) {
 // Iteration 2 | Find the Longest Word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
-function findLongestWord(array) {
-    if (array.length === 0) {
+function findLongestWord(wordsArray) {
+    // Return 0 if wordsArray is empty
+    if (wordsArray.length === 0) {
         return null;
     }
 
-    let longestWordIndex = 0;
+    let longestWord = wordsArray[0];
 
-    for (let i = 1; i < array.length; i++) {
-        if (array[i].length > array[longestWordIndex].length) {
-            longestWordIndex = i;
+    for (let i = 1; i < wordsArray.length; i++) {
+        if (wordsArray[i].length > longestWord.length) {
+            longestWord = wordsArray[i];
         }
     }
 
-    return array[longestWordIndex];
+    return longestWord;
 }
 
 
@@ -41,9 +36,14 @@ function sumNumbers(arrayOfNumbers) {
     let sumOfNumbers = 0;
 
     for (let singleNumber of arrayOfNumbers) {
+        if (typeof singleNumber !== 'number') {
+            continue;
+        }
+
         sumOfNumbers += singleNumber;
     }
 
+    // In case of an empty array, the function will return 0
     return sumOfNumbers;
 }
 
@@ -54,17 +54,12 @@ function sumNumbers(arrayOfNumbers) {
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arrayOfNumbers) {
+    // Return 0 if arrayOfNumbers is empty
     if (arrayOfNumbers.length === 0) {
         return 0;
     }
 
-    let sumOfNumbers = 0;
-
-    for (let singleNumber of arrayOfNumbers) {
-        sumOfNumbers += singleNumber;
-    }
-
-    return sumOfNumbers / arrayOfNumbers.length;
+    return sumNumbers(arrayOfNumbers) / arrayOfNumbers.length;
 }
 
 
@@ -74,7 +69,8 @@ function averageNumbers(arrayOfNumbers) {
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
 function doesWordExist(arrayOfWords, wordToFind) {
-    if (arrayOfWords.length === 0) {
+    // Return null if arrayOfWords is empty
+    if (!Array.isArray(arrayOfWords) || arrayOfWords.length === 0) {
         return null;
     }
 
