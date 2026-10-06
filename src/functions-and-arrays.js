@@ -1,5 +1,11 @@
 // Iteration 1 | Find the Maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
+    if (num1 > num2){
+        return num1
+    } else {
+        return num2
+    }
+}
 
 
 
@@ -7,7 +13,27 @@ function maxOfTwoNumbers() {}
 // Iteration 2 | Find the Longest Word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
-function findLongestWord() {}
+const arr1 = ["naranja", "melon", "banana", "manzana"];
+
+function findLongestWord(arr) {
+
+    if (arr.length === 0){
+        return null
+       };
+
+    let longestWord = arr[0];
+
+    arr.forEach(element => {
+
+       if (element.length > longestWord.length){
+            longestWord = element;
+       }
+
+    });
+
+    return longestWord;
+    
+}
 
 
 
@@ -15,7 +41,23 @@ function findLongestWord() {}
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+const numeros = [1,2,3,4,5,6,7];
+
+function sumNumbers(numArr) {
+
+    if (numArr.length === 0){
+        return 0
+    };
+
+    let total = 0;
+
+    numArr.forEach(function(nums){
+        
+        total += nums;
+    })
+
+    return total;
+}
 
 
 
@@ -23,7 +65,24 @@ function sumNumbers() {}
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(nuArr) {
+
+    if (nuArr.length === 0){
+        return 0
+    };
+
+    let totals = 0;
+
+    nuArr.forEach(function(num){
+        
+        totals += num;
+    });
+
+    let average = totals / nuArr.length;
+
+    return average;
+
+}
 
 
 
@@ -31,4 +90,19 @@ function averageNumbers() {}
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+const wordFind = "hola";
+
+function doesWordExist(wordArr) {
+
+    if (wordArr.length === 0){
+        
+        return null;
+    }  ;
+
+    let resultado = wordArr.includes(wordFind);
+
+    return resultado;
+    
+}
+
+console.log(doesWordExist(words2));
