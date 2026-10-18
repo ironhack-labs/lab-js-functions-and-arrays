@@ -58,6 +58,5 @@ function doesWordExist(wordsArr, wordToFind){
     if(!wordsArr || wordsArr.length === 0){
         return null;
     }
-    let existingWord =  wordsArr.find(word1 => wordToFind === word1);
-    return existingWord? true:false;
+    return  wordsArr.includes(wordToFind);
 }
