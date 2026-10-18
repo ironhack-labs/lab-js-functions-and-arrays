@@ -44,7 +44,7 @@ function averageNumbers(numbers) {
     if(!numbers || numbers.length === 0){
         return 0;
     }
-    const totalSum = this.sumNumbers(numbers);
+    const totalSum = sumNumbers(numbers);
     return totalSum/numbers.length;
 }
 
