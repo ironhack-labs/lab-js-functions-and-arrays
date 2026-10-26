@@ -151,7 +151,7 @@ While following the instructions for each iteration, carefully read the instruct
 Implement the function `maxOfTwoNumbers` that takes two numbers as arguments and returns the bigger number.
 
 <br>
-
+const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 
 ### Iteration 2 | Find the Longest Word
@@ -329,20 +329,20 @@ const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", 
 
   Like the `for` loop, the `while` loop requires a counter variable to keep track of the current position in the array. The counter variable must be initialized before the loop and incremented or decremented at the end of each iteration.
 
-  ```js
-  const animals = ['cat', 'dog', 'bird'];
+    ```js
+    const animals = ['cat', 'dog', 'bird'];
 
-  // initialize a counter variable (i)
-  let i = 0;
+    // initialize a counter variable (i)
+    let i = 0;
 
-  // set condition (i < animals.length)
-  while (i < animals.length) {
-    console.log(animals[i]);
-    
-    // increment counter (i++)
-    i++;
-  }
-  ```
+    // set condition (i < animals.length)
+    while (i < animals.length) {
+      console.log(animals[i]);
+      
+      // increment counter (i++)
+      i++;
+    }
+    ```
 
   [Back to top](#faqs)
 
